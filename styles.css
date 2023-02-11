@@ -77,3 +77,46 @@ h1 {
     max-height: 80%;
     max-width: 80%;
 }
+
+.popup__close {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 30px;
+    position: fixed;
+    right: 164px;
+    top: 64px;
+}
+
+.popup__arrow {
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 50px;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+
+}
+
+.popup__close,
+.popup__arrow {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+.popup__close:hover,
+.popup__arrow:hover {
+    opacity: 1;
+}
+
+
+.popup__arrow--left {
+    left: 10%;
+}
+
+.popup__arrow--right {
+    right: 10%;
+}
