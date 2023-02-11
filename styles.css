@@ -15,3 +15,16 @@ h1 {
     font-size: 96px;
     text-align: center;
 }
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    max-height: 200px;
+    max-height: 300px;
+}
+.thumbanil img {
+    height: 100%;
+    width: 100%;
+}
