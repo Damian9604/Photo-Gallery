@@ -43,10 +43,37 @@ h1 {
     transform: scale(1);
     transition: transform 0.3s;
 }
+
 .thumbnail:hover {
     transform: scale(1.2);
 }
+
 .thumbnail img {
     height: 100%;
     width: 100%;
+}
+
+.popup {
+    align-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+
+}
+
+.popup.hidden {
+    display: none;
+}
+
+
+.popup__img {
+    max-height: 80%;
+    max-width: 80%;
 }
