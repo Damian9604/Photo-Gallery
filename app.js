@@ -20,6 +20,23 @@ POPUP_CLOSE.addEventListener("click", () => {
 });
 
 ARROW_RIGHT.addEventListener("click", () => {
+    if (currentImgIndex === THUMBNAILS.lenght -1) {
+        currentImgIndex = 0;
+    } else {
+        currentImgIndex++;
+
+    }
+    currentImgIndex = currentImgIndex +1;
+    POPUP_IMG.src = THUMBNAILS[currentImgIndex].src;
+});
 
 
-})
+
+ARROW_LEFT.addEventListener("click", () => {
+    if (currentImgIndex === 0) {
+        currentImgIndex = THUMBNAILS.lenght -1;
+    } else {
+        currentImgIndex--;
+    }
+    POPUP_IMG.src = THUMBNAILS[currentImgIndex].src;
+});
