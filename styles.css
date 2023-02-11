@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(45deg, rgb(64, 161, 161), rgb(78, 76, 226) );
+    color: #fff;
+    font-family: Helvetica, sans-serif;
+    min-height: 100vh;
+    min-width: 100vw;
+} 
+
+h1 {
+    font-size: 96px;
+    text-align: center;
+}
