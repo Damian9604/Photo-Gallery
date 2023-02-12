@@ -33,11 +33,17 @@ const closePopup = () => {
 };
 
 THUMBNAILS.forEach((thumbnail, index) => {
-    thumbnail.addEventListener("click", (e) => {
+    const showPopup = (e) => {
     POPUP.classList.remove("hidden");
     POPUP_IMG.src = e.target.src;
     currentImgIndex = index;
-    });
+    };
+    thumbnail.addEventListener("click", showPopup);
+    thumbnail.addEventListener("keydown", (e) => {
+        if(e.code === "Enter") {
+            showPopup(e);
+        }
+    })
 });
 
 POPUP_CLOSE.addEventListener("click", closePopup);
