@@ -29,7 +29,10 @@ const closePopup = () => {
     setTimeout(() => {
     POPUP.classList.add("hidden");
     POPUP.classList.remove("fade-out");
-}, 300);
+    THUMBNAILS.forEach((element) => {
+        element.setAttribute("tabindex", 1);
+}); 
+},300);
 };
 
 THUMBNAILS.forEach((thumbnail, index) => {
@@ -37,13 +40,16 @@ THUMBNAILS.forEach((thumbnail, index) => {
     POPUP.classList.remove("hidden");
     POPUP_IMG.src = e.target.src;
     currentImgIndex = index;
+    THUMBNAILS.forEach((element) => {
+        element.setAttribute("tabindex", -1);
+    });
     };
     thumbnail.addEventListener("click", showPopup);
     thumbnail.addEventListener("keydown", (e) => {
-        if(e.code === "Enter") {
+        if(e.code === "Enter" && e.keyCode === 13) {
             showPopup(e);
         }
-    })
+    });
 });
 
 POPUP_CLOSE.addEventListener("click", closePopup);
