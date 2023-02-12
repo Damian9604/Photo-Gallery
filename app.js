@@ -25,7 +25,11 @@ const showPreviousImg = () => {
 };
 
 const closePopup = () => {
+    POPUP.classList.add("fade-out");
+    setTimeout(() => {
     POPUP.classList.add("hidden");
+    POPUP.classList.remove("fade-out");
+}, 300);
 };
 
 THUMBNAILS.forEach((thumbnail, index) => {
